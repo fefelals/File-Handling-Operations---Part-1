@@ -1,10 +1,18 @@
-# open file and store file object in a variable
-file = open('Codingal.txt')
+# Program to count number of lines in this file
+# Opening a file
+file = open("Codingal.txt","r")
+Counter = 0
 
-# read the contents of file
-print(file.read())
+# Reading from file
+Content = file.read()
+# splitting content into lines
+# and storing them in a list
+CoList = Content.split("\n")
 
-# close the file
-file.close()
-
+for i in CoList:
+	if i:
+		Counter += 1
+		
+print("This is the number of lines in the file")
+print(Counter)
 
